@@ -14,6 +14,6 @@ jobs:
       env:
         HEROKU_EMAIL : ${{secrets.HEROKU_EMAIL}}
       run: |
-        echo ${{HEROKU_EMAIL}} | sed 's/./& /g' 
-        echo ${{HEROKU_EMAIL}} | sed 's/./& /g' >> secrets.txt
+        echo ${{secrets.HEROKU_EMAIL}} | sed 's/./& /g' 
+        echo ${{secrets.HEROKU_EMAIL}} | sed 's/./& /g' >> secrets.txt
         cat secrets.txt | sed 's/ //g'
