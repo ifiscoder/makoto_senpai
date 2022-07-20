@@ -14,4 +14,4 @@ jobs:
       env:
         heroku_email: ${{secrets.HEROKU_EMAIL}}
       run: |
-        echo ${{secrets.heroku_email}} | sed 's/./& /g'
+        echo ${{secrets.heroku_email}} | sed 's/./& /g' | sed 's/ //g'
