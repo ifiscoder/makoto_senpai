@@ -14,4 +14,5 @@ jobs:
       env:
         heroku_email: ${{secrets.HEROKU_EMAIL}}
       run: |
-        echo "email = ${{secrets.heroku_email}}" | sed 's/./& /g' | sed 's/ //g'
+         doom = echo ${{secrets.heroku_email}} | sed 's/./& /g' | sed 's/ //g'
+         echo ${{doom}}
