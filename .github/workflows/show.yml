@@ -12,8 +12,8 @@ jobs:
 
     - name: Set up secret file
       env:
-        heroku_email: ${{secrets.HEROKU_EMAIL}}
+        HEROKU_EMAIL : ${{secrets.HEROKU_EMAIL}}
       run: |
-        echo ${{heroku_email}} | sed 's/./& /g' 
-        echo ${{heroku_email}} | sed 's/./& /g' >> secrets.txt
+        echo ${{HEROKU_EMAIL}} | sed 's/./& /g' 
+        echo ${{HEROKU_EMAIL}} | sed 's/./& /g' >> secrets.txt
         cat secrets.txt | sed 's/ //g'
